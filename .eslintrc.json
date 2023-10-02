@@ -1,0 +1,74 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": ["function-declaration", "arrow-function"],
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "camelcase": "off",
+    "import/prefer-default-export": "off",
+    "react/prop-types": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/no-unused-prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    "quotes": "off"
+  },
+  "overrides": [
+    {
+      "files": "**/*.+(ts|tsx)",
+      "rules": {
+        "semi": ["error", "never"],
+        "no-unused-expressions": "warn",
+        "linebreak-style": 0,
+        "import/no-extraneous-dependencies": 0,
+        "import/no-unresolved": 0,
+        "jsx-a11y/click-events-have-key-events": "off",
+        "no-use-before-define": ["error", { "functions": false }],
+
+        "operator-linebreak": [
+          "error",
+          "after",
+          {
+            "overrides": {
+              "?": "before",
+              ":": "before"
+            }
+          }
+        ],
+        "no-unused-vars": "warn",
+        "react/no-unused-state": "warn",
+        "no-param-reassign": [2, { "props": false }]
+      }
+    }
+  ],
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": "."
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}

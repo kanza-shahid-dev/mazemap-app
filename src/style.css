@@ -1,0 +1,255 @@
+body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+
+  font-size: 1em;
+  font-family: "Arial", sans-serif;
+  text-rendering: geometricPrecision;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: "Arial", sans-serif !important;
+  text-rendering: geometricPrecision;
+}
+
+.pageRoot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.appRoot {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.header h2 {
+  margin-bottom: 0px;
+}
+#rich-poi-card {
+  background: white;
+  width: 250px;
+  position: absolute;
+  right: 50px;
+  top: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: 3;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+input[type="text"] {
+  padding: 5px 5px;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 2px solid;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.buttonTask {
+  background-color: #4caf50; /* Green */
+  background: white;
+  width: 100px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  z-index: 3;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+#searchBar {
+  background-color: #4caf50; /* Green */
+  background: white;
+  position: absolute;
+  top: 20px;
+  left: 40%;
+  height: 30px;
+  width: 300px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  z-index: 3;
+  border-radius: 8px;
+}
+#searchInput {
+  height: 30px;
+  width: 300px;
+  border-radius: 8px;
+}
+.checkBoxList {
+  background: white;
+  position: absolute;
+  left: 7px;
+  bottom: 16px;
+  z-index: 3;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+}
+#show3DView {
+  margin-left: 10px;
+}
+.buttonExport {
+  background-color: #4caf50; /* Green */
+  background: white;
+  width: 100px;
+  position: absolute;
+  left: 130px;
+  top: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  z-index: 3;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+#bottomSheet {
+  background: white;
+  overflow-x: hidden;
+  z-index: 3;
+  position: absolute;
+  left: 20px;
+  padding: 10px;
+  top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+.buttonGreen {
+  background-color: #4caf50; /* Green */
+  color: white;
+  width: fit-content;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  z-index: 3;
+  margin-left: 50px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+  display: flex;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+#taskTitle {
+  display: none;
+}
+#poi-description {
+  display: none;
+  padding: 5px;
+}
+.poi-taskStatus {
+  display: none;
+}
+.poi-taskStatus-pending {
+  display: none;
+  background-color: yellow;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+.poi-taskStatus-completed {
+  display: none;
+  background-color: #4caf50;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+.poi-pending-card {
+  background-color: yellow !important;
+}
+.poi-completed-card {
+  background-color: #4caf50 !important;
+}
+#formStatusDropdown {
+  display: none;
+}
+.mapboxgl-ctrl-bottom-left {
+  margin-bottom: 30px;
+}
+input[type="checkbox"] {
+  width: 1.15em;
+  height: 1.15em;
+  border-radius: 0.15em;
+  padding-top: 2px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  display: block;
+}
+h2 {
+  margin-top: 0px;
+}
+a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+}
+img {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.text-loading-placeholder {
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+  background: linear-gradient(to top, #cbcbcb 0%, #f5f5f5 100%);
+  width: 50%;
+  overflow: hidden;
+  border-radius: 20px;
+  animation: loading-placeholder-animation 1s alternate infinite;
+}
+@keyframes loading-placeholder-animation {
+  0% {
+    transform: scaleX(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 0.5;
+  }
+}
