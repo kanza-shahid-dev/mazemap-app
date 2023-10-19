@@ -3,7 +3,7 @@ import React from "react";
 function PointCard() {
   return (
     <div id="rich-poi-card">
-      <label>Title</label>
+      <label></label>
       <h2 id="poi-title">
         <span className="text-loading-placeholder"></span>
       </h2>
